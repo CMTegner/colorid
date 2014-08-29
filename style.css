@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body > div {
+    display: flex;
+    height: 25vh;
+}
+
+div > div {
+    width: 20%;
+    background: tomato;
+    border: 2px dashed #bada55;
+}
