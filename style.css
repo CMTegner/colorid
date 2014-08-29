@@ -16,6 +16,6 @@ body > div {
 
 div > div {
     width: 20%;
-    background: tomato;
-    border: 2px dashed #bada55;
+    background: #000;
+    border: 1px solid #fff;
 }
