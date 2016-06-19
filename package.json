@@ -1,0 +1,19 @@
+{
+  "name": "colorid",
+  "version": "0.0.0",
+  "description": "Color grid",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify main.js -o bundle.js"
+  },
+  "author": "Christian Tegnér <christian.tegner@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "color": "^0.11.1",
+    "component-delegate": "^0.2.4",
+    "lodash.toarray": "^4.2.4"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  }
+}
