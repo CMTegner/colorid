@@ -1,4 +1,5 @@
 var delegate = require('component-delegate');
+var color = require('color');
 var toArray = require('lodash.toarray');
 
 delegate.bind(document.body, 'div', 'click', function(event) {
@@ -10,11 +11,16 @@ delegate.bind(document.body, 'div', 'click', function(event) {
     var y = rows.indexOf(row);
     var coords = getAdjacentCoords(x, y);
     var adjacentTiles = pickTiles(coords, rows);
-    tile.style.backgroundColor = 'teal';
+    whiten(tile, .1);
     adjacentTiles.forEach(function(tile) {
-        tile.style.backgroundColor = 'cyan';
+        whiten(tile, .05);
     });
 });
+
+function whiten(element, by) {
+    var c = color(window.getComputedStyle(element).backgroundColor);
+    element.style.backgroundColor = c.mix(color('white'), 1 - by).rgbString();
+}
 
 function getAdjacentCoords(x, y) {
     var coords = [];
